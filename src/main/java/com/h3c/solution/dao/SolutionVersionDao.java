@@ -33,8 +33,8 @@ public interface SolutionVersionDao {
      * 增加一条记录
      * @param solutionVersion
      */
-    @Insert("insert into solution_version(name,version,solution_id,solution,status,brief,read_role,write_role,files) " +
-            "values(#{name},#{version},#{solution_id},#{solution},#{status},#{brief},#{read_role},#{write_role},#{files}) ")
+    @Insert("insert into solution_version(name,version,solution_id,solution,status,brief,edit_comment,read_role,write_role,files) " +
+            "values(#{name},#{version},#{solution_id},#{solution},#{status},#{brief},#{edit_comment},#{read_role},#{write_role},#{files}) ")
     void insertSolutionVersion(SolutionVersion solutionVersion);
 
     /**
@@ -42,7 +42,7 @@ public interface SolutionVersionDao {
      * @param solutionVersion
      */
     @Update("update solution_version set name=#{name},version=#{version},solution_id=#{solution_id},solution=#{solution}" +
-            ",status=#{status},brief=#{brief},read_role=#{read_role},write_role=#{write_role},files=#{files} where id=#{id}")
+            ",status=#{status},brief=#{brief},edit_comment=#{edit_comment},read_role=#{read_role},write_role=#{write_role},files=#{files} where id=#{id}")
     void updateSolutionVersion(SolutionVersion solutionVersion);
 
     /**

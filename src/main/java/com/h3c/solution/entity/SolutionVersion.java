@@ -14,6 +14,16 @@ public class SolutionVersion {
     private String write_role;
     private String files;
 
+    public String getEdit_comment() {
+        return edit_comment;
+    }
+
+    public void setEdit_comment(String edit_comment) {
+        this.edit_comment = edit_comment;
+    }
+
+    private String edit_comment;
+
     public int getId() {
         return id;
     }
